@@ -9,13 +9,18 @@ class Landing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(
           color: Colors.black,
-          height: height,
+          height: (width > 900) ? height : height * 0.4,
+          width: width,
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: (width > 900)
+                ? CrossAxisAlignment.center
+                : CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Flexible(flex: 1, child: Container()),
               Flexible(
@@ -86,28 +91,23 @@ class Landing extends StatelessWidget {
                   children: [
                     CarouselSlider(
                         items: [
+                          Image.asset('Group.png',
+                              height:
+                                  (width > 900) ? height * 0.6 : height * 0.3),
                           Image.asset(
-                            // height: 200,
-                            // width: 200,
-                            'slider1.png',
+                            'Group-1.png',
                           ),
                           Image.asset(
-                            // height: 200,
-                            // width: 200,
-                            'slider2.png',
-                          ),
-                          Image.asset(
-                            // height: 200,
-                            // width: 200,
-                            'slider3.png',
+                            'Group-2.png',
                           ),
                         ],
                         options: CarouselOptions(
-                          height: height * 0.6,
-                          autoPlay: true,
-                          initialPage: 0,
-                          autoPlayInterval: const Duration(seconds: 2),
-                        )),
+                            height: (width > 900) ? height * 0.6 : height * 0.3,
+                            autoPlay: true,
+                            initialPage: 1,
+                            autoPlayCurve: Curves.fastOutSlowIn,
+                            autoPlayInterval: const Duration(seconds: 2),
+                            clipBehavior: Clip.hardEdge)),
                   ],
                 ),
               )
