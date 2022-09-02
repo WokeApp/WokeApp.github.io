@@ -9,9 +9,11 @@ class CircularCont extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
     return Container(
-      width: 200.0,
-      height: 200.0,
+      width: width * 0.1,
+      height: width * 0.1,
       decoration: const BoxDecoration(
         color: Colors.white,
         shape: BoxShape.circle,
@@ -23,7 +25,11 @@ class CircularCont extends StatelessWidget {
             textAlign: TextAlign.center,
             style: GoogleFonts.poppins(
                 color: Colors.black,
-                fontSize: 20,
+                fontSize: (width > 1200)
+                    ? 18
+                    : (width > 900)
+                        ? 12
+                        : 8,
                 fontStyle: FontStyle.italic)),
       )),
     );
