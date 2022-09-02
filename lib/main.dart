@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:woke_website/constants.dart';
+import 'package:woke_website/pages/About.dart';
 import 'package:woke_website/pages/Landing.dart';
 import 'package:woke_website/pages/features.dart';
+import 'package:woke_website/pages/footer.dart';
+import 'package:woke_website/pages/team.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,21 +17,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: const Home(),
+    return const MaterialApp(
+      title: 'WOKE',
+      home: Home(),
     );
   }
 }
@@ -38,11 +31,33 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor:Colors.black,
+        backgroundColor: Colors.black,
+        appBar: AppBar(backgroundColor: Colors.black, actions: [
+          Image.asset('woke.png'),
+          const Spacer(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color(0xff333333))),
+                onPressed: () {},
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Be A Part of Woke',
+                    style: GoogleFonts.poppins(color: wokeColor),
+                  ),
+                )),
+          )
+        ]),
         body: SingleChildScrollView(
           child: Column(children: const [
             Landing(),
+            About(),
             Features(),
+            Team(),
+            Footer(),
           ]),
         ),
       ),
