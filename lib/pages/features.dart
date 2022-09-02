@@ -12,13 +12,15 @@ class Features extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Container(
         color: Colors.black,
         child: Column(
           children: [
+            const SizedBox(height: 30),
             const Text('Features',
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 30,
                     color: Colors.white,
                     decoration: TextDecoration.none)),
             const SizedBox(
@@ -29,10 +31,10 @@ class Features extends StatelessWidget {
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    CircularCont(text: 'BUDGETING AND ANALYSIS OF SPENDING'),
-                    SizedBox(height: 100),
-                    CircularCont(text: 'BUDGETING AND ANALYSIS OF SPENDING'),
+                  children: [
+                    const CircularCont(text: 'POTS FOR REGULAR SAVINGS'),
+                    SizedBox(height: height * 0.1),
+                    const CircularCont(text: 'NO MINIMUM BALANCE'),
                   ],
                 ),
                 Padding(
@@ -40,8 +42,7 @@ class Features extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const CircularCont(
-                          text: 'BUDGETING AND ANALYSIS OF SPENDING'),
+                      const CircularCont(text: 'INVESTING TOGETHER'),
                       const SizedBox(
                         height: 30,
                       ),
@@ -85,28 +86,25 @@ class Features extends StatelessWidget {
                             ],
                           ),
                           Opacity(
-                            opacity: 0.4,
-                            child:
-                                Image.asset('rings.png', height: height * 0.8),
+                            opacity: 0.6,
+                            child: Image.asset('rings.png', width: width * 0.3),
                           ),
                         ],
                       ),
                       const SizedBox(
                         height: 30,
                       ),
-                      const CircularCont(
-                          text: 'BUDGETING AND ANALYSIS OF SPENDING'),
+                      const CircularCont(text: 'HIGHLY SECURE'),
                     ],
                   ),
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    CircularCont(text: 'BUDGETING AND ANALYSIS OF SPENDING'),
-                    SizedBox(
-                      height: 100,
-                    ),
-                    CircularCont(text: 'BUDGETING AND ANALYSIS OF SPENDING'),
+                  children: [
+                    const CircularCont(
+                        text: 'BUDGETING AND ANALYSIS OF SPENDING'),
+                    SizedBox(height: height * 0.1),
+                    const CircularCont(text: 'NO HIDDEN FEES'),
                   ],
                 ),
               ],
