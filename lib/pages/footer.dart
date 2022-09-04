@@ -1,3 +1,5 @@
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -11,57 +13,95 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
-    return Stack(alignment: Alignment.bottomCenter, children: [
+    return Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+      // Image.asset('woke.png', width: 100),
+
       Container(
-          width: width, height: height * 0.4, color: const Color(0xff333333)),
-      Column(
-        children: [
-          Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: Colors.white,
-                  image: const DecorationImage(
-                      image: ExactAssetImage('footer.png'), fit: BoxFit.fill)),
-              width: (width > 900) ? width * 0.6 : width * 0.9,
-              height: (width > 900) ? height * 0.4 : height * 0.3,
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(60, 30, width * 0.3, 10),
-                child: Wrap(children: [
-                  Text('Join Woke to meet the next-gen couples!',
-                      style: GoogleFonts.poppins(
-                        fontStyle: FontStyle.values[0],
-                        fontWeight: FontWeight.w600,
-                        fontSize: 20,
-                        color: Colors.black,
-                      )),
-                  Text(
-                      'Manage your finances together to enjoy life hassle-free!',
-                      style: GoogleFonts.poppins(
-                        fontSize: 14,
-                        color: Colors.black,
-                      )),
+        width: width,
+        decoration: const BoxDecoration(
+            color: Color(0xff333333),
+            image: DecorationImage(
+                fit: BoxFit.fitHeight,
+                image: ExactAssetImage('woke.png'),
+                opacity: 0.1)),
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              Text('Follow Us',
+                  style: GoogleFonts.workSans(
+                    color: wokeColor,
+                    fontStyle: FontStyle.italic,
+                    fontSize: (width > 500) ? 30 : 22,
+                  )),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                    child: ElevatedButton(
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                const Color(0xff333333))),
-                        onPressed: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.all(4.0),
-                          child: Text(
-                            'Try Right Now!',
-                            style: GoogleFonts.poppins(
-                              color: wokeColor,
-                              fontSize: 12,
-                            ),
-                          ),
-                        )),
-                  )
-                ]),
-              )),
-          SizedBox(height: height * 0.2)
-        ],
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        html.window.open(
+                            'https://www.facebook.com/wokeapphq', '_blank');
+                      },
+                      child: Image.asset('facebook.png', height: 30, width: 30),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        html.window.open(
+                            'https://www.instagram.com/wokeapphq/', '_blank');
+                      },
+                      child: Image.asset('insta.png', height: 30, width: 30),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        html.window
+                            .open('https://twitter.com/WokeAppHQ', '_blank');
+                      },
+                      child: Image.asset('twitter.png', height: 30, width: 30),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        html.window.open(
+                            'https://www.linkedin.com/company/woke-app-hq/',
+                            '_blank');
+                      },
+                      child: Image.asset('linkedIn.png', height: 30, width: 30),
+                    ),
+                  ),
+                ],
+              ),
+              Text('Contact Us',
+                  style: GoogleFonts.workSans(
+                    color: wokeColor,
+                    fontStyle: FontStyle.italic,
+                    fontSize: (width > 500) ? 30 : 22,
+                  )),
+              const SizedBox(height: 10),
+              Text('wokeapphq@gmail.com',
+                  style: GoogleFonts.workSans(
+                    color: Colors.white,
+                    fontSize: (width > 500) ? 22 : 16,
+                  )),
+              const SizedBox(height: 10),
+              Text('Ph No- 8660570503, 8762719014',
+                  style: GoogleFonts.workSans(
+                    color: Colors.white,
+                    fontSize: (width > 500) ? 22 : 16,
+                  )),
+            ],
+          ),
+        ),
       )
     ]);
   }
