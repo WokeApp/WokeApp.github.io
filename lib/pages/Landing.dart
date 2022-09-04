@@ -16,7 +16,7 @@ class Landing extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Image.asset(
-            'assets/hero.png',
+            'assets/Hero.png',
             height: (width > 900) ? height : height * 0.4,
             width: width,
           ),

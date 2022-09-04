@@ -21,7 +21,7 @@ class CircularCont extends StatelessWidget {
               color: Colors.white,
               shape: BoxShape.circle,
               image: DecorationImage(
-                  image: ExactAssetImage(iconAsset), opacity: 0.4))
+                  image: ExactAssetImage('assets/$iconAsset'), opacity: 0.4))
           : const BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,

@@ -96,7 +96,7 @@ class Features extends StatelessWidget {
                           ),
                           Opacity(
                             opacity: 0.25,
-                            child: Image.asset('rings.png',
+                            child: Image.asset('assets/rings.png',
                                 width:
                                     (width < 500) ? width * 0.25 : width * 0.4),
                           ),

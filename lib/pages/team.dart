@@ -44,7 +44,8 @@ class Team extends StatelessWidget {
                                   color: Colors.white,
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
-                                      image: ExactAssetImage('saakshi.png'))),
+                                      image: ExactAssetImage(
+                                          'assets/saakshi.png'))),
                             ),
                             const SizedBox(height: 20),
                             Text('Saakshi Adiga',
@@ -89,7 +90,8 @@ class Team extends StatelessWidget {
                                   color: Colors.white,
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
-                                      image: ExactAssetImage('anish.png'))),
+                                      image:
+                                          ExactAssetImage('assets/anish.png'))),
                             ),
                             const SizedBox(height: 20),
                             Text('Anish Sreenivas',

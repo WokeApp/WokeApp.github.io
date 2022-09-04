@@ -22,7 +22,7 @@ class Footer extends StatelessWidget {
             color: Color(0xff333333),
             image: DecorationImage(
                 fit: BoxFit.fitHeight,
-                image: ExactAssetImage('woke.png'),
+                image: ExactAssetImage('assets/woke.png'),
                 opacity: 0.1)),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -45,7 +45,8 @@ class Footer extends StatelessWidget {
                         html.window.open(
                             'https://www.facebook.com/wokeapphq', '_blank');
                       },
-                      child: Image.asset('facebook.png', height: 30, width: 30),
+                      child: Image.asset('assets/facebook.png',
+                          height: 30, width: 30),
                     ),
                   ),
                   Padding(
@@ -53,30 +54,34 @@ class Footer extends StatelessWidget {
                     child: InkWell(
                       onTap: () {
                         html.window.open(
-                            'https://www.instagram.com/wokeapphq/', '_blank');
-                      },
-                      child: Image.asset('insta.png', height: 30, width: 30),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: () {
-                        html.window
-                            .open('https://twitter.com/WokeAppHQ', '_blank');
-                      },
-                      child: Image.asset('twitter.png', height: 30, width: 30),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: () {
-                        html.window.open(
-                            'https://www.linkedin.com/company/woke-app-hq/',
+                            'assets/https://www.instagram.com/wokeapphq/',
                             '_blank');
                       },
-                      child: Image.asset('linkedIn.png', height: 30, width: 30),
+                      child: Image.asset('assets/insta.png',
+                          height: 30, width: 30),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        html.window.open(
+                            'assets/https://twitter.com/WokeAppHQ', '_blank');
+                      },
+                      child: Image.asset('assets/twitter.png',
+                          height: 30, width: 30),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        html.window.open(
+                            'assets/https://www.linkedin.com/company/woke-app-hq/',
+                            '_blank');
+                      },
+                      child: Image.asset('assets/linkedIn.png',
+                          height: 30, width: 30),
                     ),
                   ),
                 ],
