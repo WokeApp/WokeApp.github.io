@@ -40,7 +40,7 @@ class Home extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(10, 2, 2, 2),
                 child: Image.asset(
-                  'woke.png',
+                  'assets/woke.png',
                 ),
               ),
               const Spacer(),
