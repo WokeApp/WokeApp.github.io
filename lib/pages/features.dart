@@ -18,7 +18,7 @@ class Features extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 30),
-            const Text('Features',
+            const Text('FEATURES',
                 style: TextStyle(
                     fontSize: 30,
                     color: Colors.white,
@@ -33,8 +33,12 @@ class Features extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     const CircularCont(text: 'POTS FOR REGULAR SAVINGS'),
-                    SizedBox(height: height * 0.1),
-                    const CircularCont(text: 'NO MINIMUM BALANCE'),
+                    SizedBox(
+                        height: (width > 900) ? height * 0.3 : height * 0.1),
+                    const CircularCont(
+                      text: 'NO MINIMUM BALANCE',
+                      iconAsset: 'no_min_bal.png',
+                    ),
                   ],
                 ),
                 Padding(
@@ -49,66 +53,82 @@ class Features extends StatelessWidget {
                       Stack(
                         alignment: Alignment.center,
                         children: [
-                          Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Text('Building ',
-                                      // style: TextStyle(
-                                      //     fontSize: 20,
-                                      //     color: Colors.white,
-                                      //     decoration: TextDecoration.none)
-                                      style: GoogleFonts.poppins(
-                                        fontStyle: FontStyle.italic,
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                      )),
-                                  Text('banking ',
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 20,
+                          Container(
+                            width: width * 0.3,
+                            child: Column(
+                              children: [
+                                Wrap(
+                                  alignment: WrapAlignment.center,
+                                  crossAxisAlignment: WrapCrossAlignment.center,
+                                  children: [
+                                    Text('Building ',
+                                        // style: TextStyle(
+                                        //     fontSize: 20,
+                                        //     color: Colors.white,
+                                        //     decoration: TextDecoration.none)
+                                        style: GoogleFonts.poppins(
                                           fontStyle: FontStyle.italic,
-                                          color: wokeColor,
-                                          decoration: TextDecoration.none)),
-                                  const Text('solutions for',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontStyle: FontStyle.italic,
+                                          fontSize: (width > 900) ? 30 : 20,
                                           color: Colors.white,
-                                          decoration: TextDecoration.none))
-                                ],
-                              ),
-                              Text('couples!',
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 20,
-                                      fontStyle: FontStyle.italic,
-                                      color: wokeColor,
-                                      decoration: TextDecoration.none))
-                            ],
+                                        )),
+                                    Text('banking ',
+                                        style: GoogleFonts.poppins(
+                                            fontSize: (width > 900) ? 30 : 20,
+                                            fontStyle: FontStyle.italic,
+                                            color: wokeColor,
+                                            decoration: TextDecoration.none)),
+                                    Text('solutions for',
+                                        style: TextStyle(
+                                            fontSize: (width > 900) ? 30 : 20,
+                                            fontStyle: FontStyle.italic,
+                                            color: Colors.white,
+                                            decoration: TextDecoration.none))
+                                  ],
+                                ),
+                                Text('couples!',
+                                    style: GoogleFonts.poppins(
+                                        fontSize: (width > 900) ? 30 : 20,
+                                        fontStyle: FontStyle.italic,
+                                        color: wokeColor,
+                                        decoration: TextDecoration.none))
+                              ],
+                            ),
                           ),
                           Opacity(
-                            opacity: 0.6,
-                            child: Image.asset('rings.png', width: width * 0.3),
+                            opacity: 0.25,
+                            child: Image.asset('rings.png',
+                                width:
+                                    (width < 500) ? width * 0.25 : width * 0.4),
                           ),
                         ],
                       ),
                       const SizedBox(
                         height: 30,
                       ),
-                      const CircularCont(text: 'HIGHLY SECURE'),
+                      const CircularCont(
+                        text: 'HIGHLY SECURE',
+                        iconAsset: 'shield.png',
+                      ),
                     ],
                   ),
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    const CircularCont(text: 'BUDGETING AND ANALYSIS'),
+                    SizedBox(
+                        height: (width > 900) ? height * 0.3 : height * 0.1),
                     const CircularCont(
-                        text: 'BUDGETING AND ANALYSIS OF SPENDING'),
-                    SizedBox(height: height * 0.1),
-                    const CircularCont(text: 'NO HIDDEN FEES'),
+                      text: 'NO HIDDEN FEES',
+                      iconAsset: 'no_hidden_fees.png',
+                    ),
                   ],
                 ),
               ],
             ),
+            const SizedBox(
+              height: 40,
+            )
           ],
         ));
   }

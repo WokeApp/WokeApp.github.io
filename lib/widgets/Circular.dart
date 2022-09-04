@@ -4,20 +4,28 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CircularCont extends StatelessWidget {
-  const CircularCont({required this.text, Key? key}) : super(key: key);
+  const CircularCont({required this.text, this.iconAsset = '', Key? key})
+      : super(key: key);
   final text;
+  final iconAsset;
 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Container(
-      width: width * 0.1,
-      height: width * 0.1,
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        shape: BoxShape.circle,
-      ),
+      width: (width > 900) ? width * 0.1 : width * 0.15,
+      height: (width > 900) ? width * 0.1 : width * 0.15,
+      decoration: (iconAsset != '')
+          ? BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                  image: ExactAssetImage(iconAsset), opacity: 0.4))
+          : const BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle,
+            ),
       child: Center(
           child: Padding(
         padding: const EdgeInsets.all(8.0),
