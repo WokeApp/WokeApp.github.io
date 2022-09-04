@@ -10,15 +10,16 @@ class About extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Center(
       child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        Text('About',
+        Text('ABOUT',
             style: GoogleFonts.poppins(
               color: Colors.white,
               fontSize: 30,
             )),
         Padding(
-          padding: const EdgeInsets.fromLTRB(8, 20, 8, 20),
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
           child: Text(
               '\'wōk\' : aware of and actively attentive to important facts and issues',
               style: GoogleFonts.poppins(
@@ -28,7 +29,7 @@ class About extends StatelessWidget {
               textAlign: TextAlign.center),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(8, 10, 8, 30),
+          padding: const EdgeInsets.fromLTRB(20, 10, 20, 30),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             Wrap(
@@ -38,27 +39,27 @@ class About extends StatelessWidget {
                 Text('WOKE ',
                     style: GoogleFonts.workSans(
                       color: wokeColor,
-                      fontSize: 40,
+                      fontSize: (width > 500) ? 30 : 22,
                     )),
                 Text('is providing ',
                     style: GoogleFonts.workSans(
                       color: Colors.white,
-                      fontSize: 40,
+                      fontSize: (width > 500) ? 30 : 22,
                     )),
                 Text('couples ',
                     style: GoogleFonts.workSans(
                       color: wokeColor,
-                      fontSize: 40,
+                      fontSize: (width > 500) ? 30 : 22,
                     )),
                 Text('with a ',
                     style: GoogleFonts.workSans(
                       color: Colors.white,
-                      fontSize: 40,
+                      fontSize: (width > 500) ? 30 : 22,
                     )),
                 Text('single ',
                     style: GoogleFonts.workSans(
                       color: wokeColor,
-                      fontSize: 40,
+                      fontSize: (width > 500) ? 30 : 22,
                     )),
               ],
             ),
@@ -68,17 +69,17 @@ class About extends StatelessWidget {
                 Text('platform ',
                     style: GoogleFonts.workSans(
                       color: wokeColor,
-                      fontSize: 40,
+                      fontSize: (width > 500) ? 30 : 22,
                     )),
                 Text('for all their ',
                     style: GoogleFonts.workSans(
                       color: Colors.white,
-                      fontSize: 40,
+                      fontSize: (width > 500) ? 30 : 22,
                     )),
                 Text('financial needs ',
                     style: GoogleFonts.workSans(
                       color: wokeColor,
-                      fontSize: 40,
+                      fontSize: (width > 500) ? 30 : 22,
                     )),
               ],
             ),
