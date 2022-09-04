@@ -103,13 +103,13 @@ class Landing extends StatelessWidget {
                         CarouselSlider(
                             items: [
                               Image.asset(
-                                'Group.png',
+                                'assets/Group.png',
                               ),
                               Image.asset(
-                                'Group-1.png',
+                                'assets/Group-1.png',
                               ),
                               Image.asset(
-                                'Group-2.png',
+                                'assets/Group-2.png',
                               ),
                             ],
                             options: CarouselOptions(
