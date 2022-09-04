@@ -13,7 +13,7 @@ class Team extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       child: Column(
         children: [
-          Text('Team',
+          Text('TEAM',
               style: GoogleFonts.poppins(
                 color: Colors.white,
                 fontSize: 25,
@@ -33,29 +33,38 @@ class Team extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 80.0,
-                            height: 80.0,
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                    image: ExactAssetImage('saakshi.png'))),
-                          ),
-                          const SizedBox(height: 20),
-                          Text('Saakshi Adiga',
-                              style: GoogleFonts.poppins(
-                                color: Colors.black,
-                                fontSize: 18,
-                              )),
-                          Text('Co-Founder, BITS Pilani Goa',
-                              style: GoogleFonts.poppins(
-                                color: Colors.black,
-                                fontSize: 18,
-                              )),
-                        ],
+                      child: Container(
+                        width: 150,
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 80.0,
+                              height: 80.0,
+                              decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                      image: ExactAssetImage('saakshi.png'))),
+                            ),
+                            const SizedBox(height: 20),
+                            Text('Saakshi Adiga',
+                                style: GoogleFonts.poppins(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                )),
+                            Text('Co-Founder',
+                                style: GoogleFonts.poppins(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                )),
+                            Text('BITS Pilani Goa',
+                                style: GoogleFonts.poppins(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                )),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -69,29 +78,38 @@ class Team extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 80.0,
-                            height: 80.0,
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                    image: ExactAssetImage('anish.png'))),
-                          ),
-                          const SizedBox(height: 20),
-                          Text('Anish Sreenivas',
-                              style: GoogleFonts.poppins(
-                                color: Colors.black,
-                                fontSize: 18,
-                              )),
-                          Text('Co-Founder, BITS Pilani Goa',
-                              style: GoogleFonts.poppins(
-                                color: Colors.black,
-                                fontSize: 18,
-                              )),
-                        ],
+                      child: Container(
+                        width: 150,
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 80.0,
+                              height: 80.0,
+                              decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                      image: ExactAssetImage('anish.png'))),
+                            ),
+                            const SizedBox(height: 20),
+                            Text('Anish Sreenivas',
+                                style: GoogleFonts.poppins(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                )),
+                            Text('Co-Founder',
+                                style: GoogleFonts.poppins(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                )),
+                            Text('BITS Pilani Goa',
+                                style: GoogleFonts.poppins(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                )),
+                          ],
+                        ),
                       ),
                     ),
                   ),
