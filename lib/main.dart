@@ -29,28 +29,37 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
-        appBar: AppBar(backgroundColor: Colors.black, actions: [
-          Image.asset('woke.png'),
-          const Spacer(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                        const Color(0xff333333))),
-                onPressed: () {},
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Be A Part of Woke',
-                    style: GoogleFonts.poppins(color: wokeColor),
-                  ),
-                )),
-          )
-        ]),
+        appBar: AppBar(
+            toolbarHeight: height * 0.08,
+            backgroundColor: Colors.black,
+            actions: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 2, 2, 2),
+                child: Image.asset(
+                  'woke.png',
+                ),
+              ),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color(0xff333333))),
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Join Us',
+                        style: GoogleFonts.poppins(color: wokeColor),
+                      ),
+                    )),
+              )
+            ]),
         body: SingleChildScrollView(
           child: Column(children: const [
             Landing(),
