@@ -56,6 +56,7 @@ class Features extends StatelessWidget {
                           Container(
                             width: width * 0.3,
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Wrap(
                                   alignment: WrapAlignment.center,
@@ -94,12 +95,14 @@ class Features extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Opacity(
-                            opacity: 0.25,
-                            child: Image.asset('assets/rings.png',
-                                width:
-                                    (width < 500) ? width * 0.25 : width * 0.4),
-                          ),
+                          // Opacity(
+                          // opacity: 0.6,
+                          // child:
+                          Image.asset('assets/rings.png',
+                              color: Colors.white.withOpacity(0.6),
+                              // colorBlendMode: BlendMode.modulate,
+                              width: (width < 500) ? width * 0.5 : width * 0.4),
+                          // ),
                         ],
                       ),
                       const SizedBox(
