@@ -18,12 +18,16 @@ class Footer extends StatelessWidget {
 
       Container(
         width: width,
-        decoration: const BoxDecoration(
-            color: Color(0xff333333),
+        decoration: BoxDecoration(
+            color: const Color(0xff333333),
             image: DecorationImage(
-                fit: BoxFit.fitHeight,
-                image: ExactAssetImage('assets/woke.png'),
-                opacity: 0.1)),
+              fit: BoxFit.fitHeight,
+              // opacity: 0.1,
+              colorFilter: ColorFilter.mode(
+                  const Color(0xff333333).withOpacity(0.95),
+                  BlendMode.luminosity),
+              image: ExactAssetImage('assets/woke.png'),
+            )),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
@@ -54,8 +58,7 @@ class Footer extends StatelessWidget {
                     child: InkWell(
                       onTap: () {
                         html.window.open(
-                            'assets/https://www.instagram.com/wokeapphq/',
-                            '_blank');
+                            'https://www.instagram.com/wokeapphq/', '_blank');
                       },
                       child: Image.asset('assets/insta.png',
                           height: 30, width: 30),
@@ -65,8 +68,8 @@ class Footer extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: InkWell(
                       onTap: () {
-                        html.window.open(
-                            'assets/https://twitter.com/WokeAppHQ', '_blank');
+                        html.window
+                            .open('https://twitter.com/WokeAppHQ', '_blank');
                       },
                       child: Image.asset('assets/twitter.png',
                           height: 30, width: 30),
@@ -77,7 +80,7 @@ class Footer extends StatelessWidget {
                     child: InkWell(
                       onTap: () {
                         html.window.open(
-                            'assets/https://www.linkedin.com/company/woke-app-hq/',
+                            'https://www.linkedin.com/company/woke-app-hq/',
                             '_blank');
                       },
                       child: Image.asset('assets/linkedIn.png',
@@ -93,7 +96,7 @@ class Footer extends StatelessWidget {
                     fontSize: (width > 500) ? 30 : 22,
                   )),
               const SizedBox(height: 10),
-              Text('wokeapphq@gmail.com',
+              Text('team@wokeapp.club',
                   style: GoogleFonts.workSans(
                     color: Colors.white,
                     fontSize: (width > 500) ? 22 : 16,
