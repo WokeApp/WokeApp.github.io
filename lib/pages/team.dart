@@ -36,6 +36,7 @@ class Team extends StatelessWidget {
                       child: Container(
                         width: 150,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
                               width: 80.0,
@@ -82,6 +83,7 @@ class Team extends StatelessWidget {
                       child: Container(
                         width: 150,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
                               width: 80.0,
