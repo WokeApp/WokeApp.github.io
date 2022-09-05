@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:woke_website/constants.dart';
 
 class CircularCont extends StatelessWidget {
   const CircularCont({required this.text, this.iconAsset = '', Key? key})
@@ -14,14 +15,19 @@ class CircularCont extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Container(
-      width: (width > 900) ? width * 0.1 : width * 0.15,
-      height: (width > 900) ? width * 0.1 : width * 0.15,
+      width: (width > 900) ? width * 0.13 : width * 0.15,
+      height: (width > 900) ? width * 0.13 : width * 0.15,
       decoration: (iconAsset != '')
           ? BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
               image: DecorationImage(
-                  image: ExactAssetImage('assets/$iconAsset'), opacity: 0.4))
+                colorFilter: ColorFilter.mode(
+                    Colors.white.withOpacity(0.6), BlendMode.lighten),
+                image: ExactAssetImage(
+                  'assets/$iconAsset',
+                ),
+              ))
           : const BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
@@ -37,7 +43,9 @@ class CircularCont extends StatelessWidget {
                     ? 18
                     : (width > 900)
                         ? 12
-                        : 8,
+                        : (width > 500)
+                            ? 8
+                            : 5,
                 fontStyle: FontStyle.italic)),
       )),
     );
